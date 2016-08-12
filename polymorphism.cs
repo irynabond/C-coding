@@ -10,14 +10,14 @@ namespace ConsoleApplication3
     {
         static void Main(string[] args)
         {
-            var fruits = new List<Produce>();
+            var produce = new List<Produce>();
             var apple = new Fruit("Apple", 2.2);
-            fruits.Add(apple);
+            produce.Add(apple);
             var grape = new Fruit("Grape", 3.3);
-            fruits.Add(grape);
+            produce.Add(grape);
             var beet = new Vegatable("Beet", 3.4);
-            //produce.Add(beet);
-            Console.WriteLine(Total.GetTotal(fruits));
+            produce.Add(beet);
+            Console.WriteLine("The total weight is " + Total.GetTotal(produce));
         }
         class Total
         {
