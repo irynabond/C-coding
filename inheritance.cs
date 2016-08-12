@@ -10,11 +10,11 @@ namespace ConsoleApplication3
     {
         static void Main(string[] args)
         {
-            var produce = new List<object>();
+            var produce = new List<Produce>();
             var apple = new Fruit("Apple", 2.2);
-            var banana = new Fruit ("Banana", 3);
             produce.Add(apple);
-            produce.Add(banana);
+            var beet = new Vegatable("Beet", 3.4);
+            produce.Add(beet);
             foreach (var fruit in produce)
             {
                 Console.WriteLine(fruit);
@@ -58,6 +58,13 @@ namespace ConsoleApplication3
 
             }
 
+        }
+        class Vegatable : Produce
+        {
+            public Vegatable(string name, double weight) :
+                base(name, weight) {
+
+            }
         }
     }
 }
