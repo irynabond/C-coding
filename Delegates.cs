@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace ConsoleApplication3
 {
     public delegate string MyDelegate(int num1, int num2);
+    public delegate string SecondDelegate(string name);
 
     class Operation
     {
@@ -34,6 +35,13 @@ namespace ConsoleApplication3
             Operation oper = new Operation();
             f = oper.MakeCalc;
             Console.WriteLine(f(10, 40));
+
+            //anonymous delegate
+            SecondDelegate f2 = delegate (string name)
+            {
+                return "Hello " + name;
+            };
+            Console.WriteLine(f2("Iryna"));
         }
     }
 }
