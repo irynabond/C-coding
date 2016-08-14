@@ -10,7 +10,7 @@ namespace ConsoleApplication4
 {
     class Program
     {
-        class Animal
+        abstract class Animal
         {
             private string name;
             private int age;
@@ -55,6 +55,7 @@ namespace ConsoleApplication4
             Dog puppy = new Dog("bob", 3);
             Console.WriteLine(puppy.Name);
             puppy.MakeNoise();
+            
 
         }
     }
